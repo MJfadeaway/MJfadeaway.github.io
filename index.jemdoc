@@ -1,0 +1,31 @@
+# jemdoc: menu{MENU}{index.html}, nofooter  
+==Kejun Tang
+
+~~~
+{}{img_left}{pic/tkj.jpeg}{alt text}{200}{158}
+Phd candidate,\n [http://sist.shanghaitech.edu.cn/sist_en/ School of Information Science and Technology], \n[http://www.shanghaitech.edu.cn/eng/main.htm ShanghaiTech University]\n
+393 Middle Huaxia Road, Pudong, Shanghai \n 
+Email: /tangkj/ \[@\] shanghaitech \[DOT\] edu \[DOT\] cn
+~~~
+
+== About me
+I am a Phd candidate in the School of Information Science and Technology ([http://sist.shanghaitech.edu.cn/sist_en/ SIST]), ShanghaiTech University ([http://www.shanghaitech.edu.cn/eng/main.htm]).   
+
+== Education
+*ShanghaiTech University*, /Sept 2015 - present/\n
+School of Information Science and Technology
+
+*YanTai University*, /Sept 2011 - June 2015/\n
+Department of Mathematics and Information Science
+
+== Research
+My research interests include tensor methods, machine learning and scientific computing. In particular, I am working on
+- Tensor recovery
+- Density estimation
+
+
+[projects.html Find out more].
+
+
+\n
+[doc/tangkj_CV.pdf A brief cv].
