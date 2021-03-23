@@ -42,11 +42,15 @@ Novel  efficient initialization strategies for non-convex optimization problems 
 <tr><td ><img src="pic/proj2_fpe.png" alt="alt text" width="532px" height="274x" /></td>
 <td><img src="pic/proj2_fpe1.png" alt="alt text" width="295px" height="274px" /></td>
 </table>
-<h3>Density estimation</h3>
+<h3>Density estimation and its applications</h3>
 <table class="imgtable"><tr><td>
-<img src="pic/density.png" alt="alt text" width="130px" height="130px" />&nbsp;</td>
-<td align="left"><p>In this work, we study the performance of high-dimensional density estimation using flow-based generative model...</p>
-</td></tr></table>
+<img src="pic/pdf1.png" alt="alt text" width="130px" height="130px" />&nbsp;</td>
+<td align="left"><p>In this work, we develop an invertible transport map, called KRnet, for density estimation by coupling the Knothe-Rosenblatt (KR) rearrangement and the flow-based generative model, which generalizes the real NVP model. The triangular structure of the KR rearrangement breaks the symmetry of the real NVP in terms of the exchange of information between dimensions, which not only accelerates the training process but also improves the accuracy significantly. We use KRnet as a PDF model to approximate the Fokker-Planck equation to alleviate the difficulties from the curse of dimensionality. Difficulties caused by the boundary conditions and the nonnegativity of PDF have disappeared since KRnet is a family of probability density functions. To result in effective stochastic
+collocation points for training KRnet, we develop an adaptive sampling procedure, where samples are generated iteratively using KRnet at each iteration.</p>
+</td></tr>
+<tr><td ><img src="pic/pdf2.png" alt="alt text" width="532px" height="274x" /></td>
+<td><img src="pic/sample.png" alt="alt text" width="295px" height="274px" /></td>
+</table>
 <h2>Talks</h2>
 <p>SIAM CSE 2019, Spokane, Washington, February 2019 - Rank adaptive tensor recovery based model reduction for partial differential equation with high-dimensional random inputs <a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=65894">[Link]</a><br /></p>
 <p>CSIAM 2018, Chengdu, China, September 2018 - Tensor recovery for PDEs with high-dimensional random inputs <a href="http://ddl.escience.cn/f/QULZ">[Link]</a><br /></p>
