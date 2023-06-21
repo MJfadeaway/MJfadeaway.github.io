@@ -70,7 +70,16 @@ collocation points for training KRnet, we develop an adaptive sampling procedure
 <tr><td ><img src="pic/das3.png" alt="alt text" width="532px" height="274x" /></td>
 <td><img src="pic/das2.png" alt="alt text" width="395px" height="274px" /></td>
 </table>
+<h3>Adversarial Adaptive Sampling: Unify PINN and Optimal Transport for the Approximation of PDEs</h3>
+<table class="imgtable"><tr><td>
+<img src="pic/aas_idea.png" alt="alt text" width="451px" height="321px" />&nbsp;</td>
+<td align="left"><p>Solving partial differential equations (PDEs) is a central task in scientific computing. Recently, neural network approximation of PDEs has received increasing attention due to its flexible meshless discretization and its potential for high-dimensional problems. One fundamental numerical difficulty is that random samples in the training set introduce statistical errors into the discretization of loss functional which may become the dominant error in the final approximation, and therefore overshadow the modeling capability of the neural network. In this work, we propose a new minmax formulation to optimize simultaneously the approximate solution, given by a neural network model, and the random samples in the training set, provided by a deep generative model. The key idea is to use a deep generative model to adjust random samples in the training set such that the residual induced by the approximate PDE solution can maintain a smooth profile when it is being minimized. Such an idea is achieved by implicitly embedding the Wasserstein distance between the residual-induced distribution and the uniform distribution into the loss, which is then minimized together with the residual. A nearly uniform residual profile means that its variance is small for any normalized weight function such that the Monte Carlo approximation error of the loss functional is reduced significantly for a certain sample size. The adversarial adaptive sampling (AAS) approach proposed in this work is the first attempt to formulate two essential components, minimizing the residual and seeking the optimal training set, into one minmax objective functional for the neural network approximation of PDEs.</p>
+</td></tr>
+<tr><td ><img src="pic/aas_res.png" alt="alt text" width="730px" height="256x" /></td>
+<td><img src="pic/aas_res2.png" alt="alt text" width="885px" height="432px" /></td>
+</table>
 <h2>Talks</h2>
+<p>CSIAM-UQ23, Yantai, China, May 2023 - AONN: An adjoint-oriented neural network method for all-at-once solutions of parametric optimal control problems <a href="doc/AONN_pre.pdf">[Slides]</a><br /></p>
 <p>北大数智青年论坛: 在线会议, March 5, 2022; 中科大苏州高等研究院墨子论坛，在线会议， March 14, 2022 - DAS: A deep adaptive sampling method for solving partial differential equations <a href="doc/DAS_pre.pdf">[Slides]</a><br /></p>
 <p>Workshop at Peng Cheng Laboratory: AI for computing, Shenzhen, China, July 2021 - Adaptive deep density approximation for Fokker-Planck equations <a href="doc/KR_adda.pdf">[Slides]</a><br /></p>
 <p>SIAM CSE 2019, Spokane, Washington, February 2019 - Rank adaptive tensor recovery based model reduction for partial differential equation with high-dimensional random inputs <a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=65894">[Link]</a><br /></p>
