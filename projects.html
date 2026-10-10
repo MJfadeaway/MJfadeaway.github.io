@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Projects</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">menu</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="projects.html" class="current">Projects</a></div>
+<div class="menu-item"><a href="awards.html">Honors&nbsp;and&nbsp;Awards</a></div>
+<div class="menu-item"><a href="activities.html">Activities</a></div>
+<div class="menu-item"><a href="teaching.html">Teaching</a></div>
+<div class="menu-item"><a href="miscellaneous.html">Miscellaneous</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Research</h1>
+</div>
+<h2>Projects</h2>
+<h3>Tensor recovery</h3>
+<table class="imgtable"><tr><td>
+<img src="pic/tensor.png" alt="alt text" width="393px" height="175px" />&nbsp;</td>
+<td align="left"><p>This work proposes a systematic model reduction approach based on rank adaptive tensor recovery for partial differential equation (PDE) models with high-dimensional random parameters. Since the standard outputs of interest of these models are discrete solutions on given physical grids which are high-dimensional, we use kernel principal component analysis to construct stochastic collocation approximations in reduced dimensional spaces of the outputs. To address the issue of high-dimensional random inputs, we develop a new efficient rank adaptive tensor recovery approach to compute the collocation coefficients. 
+Novel  efficient initialization strategies for non-convex optimization problems involved in tensor recovery are also developed in this work. </p>
+</td></tr>
+<tr><td ><img src="pic/proj_tensor.png" alt="alt text" width="380px" height="274x" /></td>
+<td><img src="pic/proj_tensor1.png" alt="alt text" width="596px" height="274px" /></td>
+</tr>
+</table>
+<h3>Tensor train random projection</h3>
+<table class="imgtable"><tr><td>
+<img src="pic/proj_tt.png" alt="alt text" width="393px" height="175px" />&nbsp;</td>
+<td align="left"><p>This work proposes a novel tensor train random projection (TTRP) method for dimension reduction, where pairwise distances
+can be approximately preserved. Based on a tensor train format, this new random projection method can  speed up the computation for high dimensional problems 
+and requires less storage with little loss in accuracy, compared with existing methods (e.g., very sparse random projection). Our TTRP is systematically constructed through a rank-one TT-format matrix with Rademacher random variables, which results in efficient projection with small variances. </p>
+</td></tr>
+<tr><td ><img src="pic/proj_tt_time.png" alt="alt text" width="380px" height="274x" /></td>
+<td><img src="pic/proj_tt_table.png" alt="alt text" width="616px" height="210px" /></td>
+</tr>
+</table>
+<h3>Failure probability estimation</h3>
+<table class="imgtable"><tr><td>
+<img src="pic/proj2_hnh.png" alt="alt text" width="332px" height="170px" />&nbsp;</td>
+<td align="left"><p>Failure probability evaluation for complex physical and engineering systems governed by partial differential equations (PDEs) are computationally intensive, especially when high-dimensional random parameters are involved. Since standard numerical schemes for solving these complex PDEs are  expensive, traditional Monte Carlo methods which require repeatedly solving PDEs are infeasible. Alternative approaches which are typically the surrogate based methods suffer from the so-called curse of dimensionality, which limits their application to problems with high-dimensional parameters. For this purpose, we  develop a novel hierarchical neural hybrid (HNH) method to efficiently compute failure probabilities of these challenging high-dimensional problems. Especially,  multifidelity surrogates are constructed based on neural networks with different levels of layers, such that expensive highfidelity surrogates are adapted only when the parameters are in the suspicious domain. The efficiency of our new HNH method is theoretically analyzed and is demonstrated with numerical experiments. From numerical results, we show that to achieve an accuracy in estimating the rare failure probability (e.g.,10−5), the traditional Monte Carlo method needs to  solve PDEs more than a million times, while our HNH only requires solving them a few thousand times.</p>
+</td></tr>
+<tr><td ><img src="pic/proj2_fpe.png" alt="alt text" width="532px" height="274x" /></td>
+<td><img src="pic/proj2_fpe1.png" alt="alt text" width="295px" height="274px" /></td>
+</table>
+<h3>KRnet and its applications</h3>
+<table class="imgtable"><tr><td>
+<img src="pic/pdf1.png" alt="alt text" width="260px" height="230px" />&nbsp;</td>
+<td align="left"><p>In this work, we develop an invertible transport map, called KRnet, for density estimation by coupling the Knothe-Rosenblatt (KR) rearrangement and the flow-based generative model, which generalizes the real NVP model. The triangular structure of the KR rearrangement breaks the symmetry of the real NVP in terms of the exchange of information between dimensions, which not only accelerates the training process but also improves the accuracy significantly. We use KRnet as a PDF model to approximate the Fokker-Planck equation to alleviate the difficulties from the curse of dimensionality. Difficulties caused by the boundary conditions and the nonnegativity of PDF have disappeared since KRnet is a family of probability density functions. To result in effective stochastic
+collocation points for training KRnet, we develop an adaptive sampling procedure, where samples are generated iteratively using KRnet at each iteration.</p>
+</td></tr>
+<tr><td ><img src="pic/pdf2.png" alt="alt text" width="532px" height="274x" /></td>
+<td><img src="pic/sample.png" alt="alt text" width="395px" height="274px" /></td>
+</table>
+<h3>DAS: A deep adaptive sampling method for solving partial differential equations</h3>
+<table class="imgtable"><tr><td>
+<img src="pic/das1.png" alt="alt text" width="260px" height="230px" />&nbsp;</td>
+<td align="left"><p>In this work we propose a deep adaptive sampling (DAS) method for solving partial differential equations (PDEs), where deep neural networks are utilized to approximate the solutions of PDEs and deep generative models are employed to generate new collocation points that refine the training set. The overall procedure of DAS consists of two components: solving the PDEs by minimizing the residual loss on the collocation points in the training set and generating a new training set to further improve the accuracy of current approximate solution. In particular, we treat the residual as a probability density function and approximate it with a deep generative model, called KRnet. The new samples from KRnet are consistent with the distribution induced by the residual, i.e., more samples are located in the region of large residual and less samples are located in the region of small residual. Analogous to classical adaptive methods such as the adaptive finite element, KRnet acts as an error indicator that guides the refinement of the training set. Compared to the neural network approximation obtained with uniformly distributed collocation points, the developed algorithms can significantly improve the accuracy, especially for low regularity and high-dimensional problems. We present a theoretical analysis to show that the proposed DAS method can reduce the error bound and demonstrate its effectiveness with numerical experiments.</p>
+</td></tr>
+<tr><td ><img src="pic/das3.png" alt="alt text" width="532px" height="274x" /></td>
+<td><img src="pic/das2.png" alt="alt text" width="395px" height="274px" /></td>
+</table>
+<h3>Adversarial Adaptive Sampling: Unify PINN and Optimal Transport for the Approximation of PDEs</h3>
+<table class="imgtable"><tr><td>
+<img src="pic/aas_idea.png" alt="alt text" width="390px" height="200px" />&nbsp;</td>
+<td align="left"><p>Solving partial differential equations (PDEs) is a central task in scientific computing. Recently, neural network approximation of PDEs has received increasing attention due to its flexible meshless discretization and its potential for high-dimensional problems. One fundamental numerical difficulty is that random samples in the training set introduce statistical errors into the discretization of loss functional which may become the dominant error in the final approximation, and therefore overshadow the modeling capability of the neural network. In this work, we propose a new minmax formulation to optimize simultaneously the approximate solution, given by a neural network model, and the random samples in the training set, provided by a deep generative model. The key idea is to use a deep generative model to adjust random samples in the training set such that the residual induced by the approximate PDE solution can maintain a smooth profile when it is being minimized. Such an idea is achieved by implicitly embedding the Wasserstein distance between the residual-induced distribution and the uniform distribution into the loss, which is then minimized together with the residual. A nearly uniform residual profile means that its variance is small for any normalized weight function such that the Monte Carlo approximation error of the loss functional is reduced significantly for a certain sample size. The adversarial adaptive sampling (AAS) approach proposed in this work is the first attempt to formulate two essential components, minimizing the residual and seeking the optimal training set, into one minmax objective functional for the neural network approximation of PDEs.</p>
+</td></tr>
+<tr><td ><img src="pic/aas_res.png" alt="alt text" width="600px" height="256x" /></td>
+<td><img src="pic/aas_res2.png" alt="alt text" width="650px" height="200px" /></td>
+</table>
+<h2>Talks and Posters</h2>
+<p>Mini-Symposium of the International Conference on Scientific Computation and Differential Equations (SciCADE 2024), National University of Singapore, Singapore, July 2024 - Deep adaptive sampling for surrogate modeling without labeled data <a href="doc/DAS2-scicade.pdf">[Slides]</a><br /></p>
+<p>Mini-Symposium of the 17th SIAM East Asian Section Conference (2024), Macau, China, June 2024 - Deep adaptive sampling for surrogate modeling without labeled data <a href="doc/DAS2-easiam.pdf">[Slides]</a><br /></p>
+<p>The International Conference on Learning Representations (ICLR 2024), Vienna, Austria, May 2024 - Adversarial adaptive sampling: Unify PINN and optimal transport for the approximation of PDEs <a href="doc/AAS_Poster_ICLR2024.pdf">[Poster]</a><br /></p>
+<p>Conference on machine learning and model order reduction, ShanghaiTech University, April 2024 - Deep adaptive sampling for surrogate modeling <a href="doc/DAS_surrogates.pdf">[Slides]</a><br /></p>
+<p>100th Anniversary of Mathematics at Henan University, Virtual, November 2023 - Deep learning for PDEs: deep adaptive sampling and surrogate modeling <a href="doc/DL_for_PDE.pdf">[Slides]</a><br /></p>
+<p>CSIAM-2023, Kunming, China, October 2023 - Adversarial Adaptive Sampling: Unify PINN and Optimal Transport for the Approximation of PDEs <a href="doc/AAS_pre.pdf">[Slides]</a><br /></p>
+<p>Northwestern Polytechnical University, Virtual, October 2023 - Deep adaptive sampling: Algorithm, Theory, and Applications <a href="doc/DAS_pre.pdf">[Slides]</a><br /></p>
+<p>City University of Hong Kong (CityU), Hong Kong, China, August 2023 - DAS-PINNs: A deep adaptive sampling method for solving high-dimensional partial differential equations <a href="doc/DAS_pre.pdf">[Slides]</a><br /></p>
+<p>The University of Hong Kong (HKU), Virtual, May 2023 - DAS-PINNs: A deep adaptive sampling method for solving high-dimensional partial differential equations <a href="doc/DAS_pre.pdf">[Slides]</a><br /></p>
+<p>Jinan Institute of Supercomputing Technology, Virtual, May 2023 - Deep adaptive sampling: Algorithm, Theory, and Applications <a href="doc/DAS_pre.pdf">[Slides]</a><br /></p>
+<p>CSIAM-UQ23, Yantai, China, May 2023 - AONN: An adjoint-oriented neural network method for all-at-once solutions of parametric optimal control problems <a href="doc/AONN_pre.pdf">[Slides]</a><br /></p>
+<p>Shanghai Normal University, Virtual, June, 2022 - DAS: A deep adaptive sampling method for solving partial differential equations <a href="doc/DAS_pre.pdf">[Slides]</a><br /></p>
+<p>北大数智青年论坛: 在线会议, March 5, 2022; 中科大苏州高等研究院墨子论坛: 在线会议， March 14, 2022; 之江实验室智能计算论坛: 在线会议，November 2022 - DAS: A deep adaptive sampling method for solving partial differential equations <a href="doc/DAS_pre.pdf">[Slides]</a><br /></p>
+<p>Workshop at Peng Cheng Laboratory: AI for computing, Shenzhen, China, July 2021 - Adaptive deep density approximation for Fokker-Planck equations <a href="doc/KR_adda.pdf">[Slides]</a><br /></p>
+<p>SIAM CSE 2019, Spokane, Washington, February 2019 - Rank adaptive tensor recovery based model reduction for partial differential equation with high-dimensional random inputs <a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=65894">[Link]</a><br /></p>
+<p>CSIAM 2018, Chengdu, China, September 2018 - Tensor recovery for PDEs with high-dimensional random inputs <a href="http://ddl.escience.cn/f/QULZ">[Link]</a><br /></p>
+</td>
+</tr>
+</table>
+</body>
+</html>
